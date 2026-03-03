@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ── Reset ── */
+.ns-wrap * {
+  box-sizing: border-box;
+}
+
+/* ── Full-screen background ── */
+.ns-wrap {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100dvh;
+  background: #0d0f14;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  padding: 18px 16px;
+}
+
+.ns-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.ns-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top right, rgba(160, 60, 10, 0.24), transparent 55%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes nsRay1 {
+  from { transform: rotate(-22deg) translateY(0px);   opacity: 0.85; }
+  to   { transform: rotate(-20deg) translateY(-14px); opacity: 1;    }
+}
+@keyframes nsRay2 {
+  from { transform: rotate(-20deg) translateY(0px);  opacity: 0.7; }
+  to   { transform: rotate(-22deg) translateY(10px); opacity: 0.9; }
+}
+@keyframes nsSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Logo ── */
+.ns-logo {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.ns-logo-img {
+  width: 180px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 14px rgba(232, 85, 30, 0.35));
+}
+
+/* ── Card ── */
+.ns-card {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 360px;
+  background: #1a1008;
+  border-radius: 14px;
+  padding: 20px 18px 16px;
+  box-shadow: 0 8px 60px rgba(0, 0, 0, 0.7);
+}
+
+/* ── Error banner ── */
+.ns-error {
+  background: rgba(220, 38, 38, 0.12);
+  border: 1px solid rgba(220, 38, 38, 0.35);
+  color: #fca5a5;
+  border-radius: 7px;
+  padding: 9px 13px;
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+/* ── Avatar preview ── */
+.ns-preview {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 22px;
+}
+
+.ns-av-outer {
+  position: relative;
+  width: 86px;
+  height: 86px;
+}
+
+.ns-av-ring {
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff8c00, #ff4500);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.ns-av-ring.active {
+  opacity: 1;
+}
+
+.ns-av-mask {
+  position: absolute;
+  inset: 1px;
+  border-radius: 50%;
+  background: #1a1008;
+}
+
+.ns-av-img {
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ns-av-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ns-av-empty {
+  position: absolute;
+  inset: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px dashed rgba(255, 140, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.2);
+  z-index: 1;
+}
+
+.ns-av-badge {
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #ff8c00, #e05000);
+  border-radius: 50%;
+  border: 2px solid #1a1008;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(255, 100, 0, 0.4);
+}
+
+/* ── Section labels ── */
+.ns-field-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 8px;
+}
+
+/* ── Upload button ── */
+.ns-upload-btn {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 8px;
+  border: 1.5px dashed rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.05);
+  color: rgba(255, 255, 255, 0.45);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+  margin-bottom: 20px;
+}
+
+.ns-upload-btn:hover {
+  border-color: rgba(255, 140, 0, 0.45);
+  color: rgba(255, 255, 255, 0.75);
+  background: rgba(255, 100, 0, 0.07);
+}
+
+.ns-upload-btn.uploaded {
+  border-style: solid;
+  border-color: #ff8c00;
+  color: #ff9a20;
+  background: rgba(255, 100, 0, 0.09);
+}
+
+/* ── Avatar grid ── */
+.ns-av-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.ns-av-item {
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  transition: all 0.18s;
+}
+
+.ns-av-item:hover {
+  border-color: rgba(255, 140, 0, 0.5);
+  transform: scale(1.06);
+}
+
+.ns-av-item.selected {
+  border-color: #ff8c00;
+  box-shadow: 0 0 0 1px #ff8c00, 0 0 12px rgba(255, 140, 0, 0.3);
+}
+
+.ns-av-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ns-av-check {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 120, 0, 0.28);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── OR divider ── */
+.ns-or {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 2px 0 16px;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.ns-or::before,
+.ns-or::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* ── URL input ── */
+.ns-input-wrap {
+  position: relative;
+  margin-bottom: 22px;
+}
+
+.ns-input-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.25);
+  pointer-events: none;
+  display: flex;
+}
+
+.ns-url-input {
+  width: 100%;
+  padding: 12px 14px 12px 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.ns-url-input::placeholder {
+  color: rgba(255, 255, 255, 0.22);
+}
+
+.ns-url-input:focus {
+  background: #fff;
+  border-color: #ff8c00;
+  color: #111;
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.18);
+}
+
+.ns-url-input:focus::placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+/* ── Action buttons ── */
+.ns-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+.ns-btn-skip {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.ns-btn-skip:hover {
+  border-color: rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ns-btn-continue {
+  flex: 2;
+  padding: 13px 18px;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(90deg, #ff6d00, #ff9a00);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
+  box-shadow: 0 4px 22px rgba(255, 120, 0, 0.35);
+  letter-spacing: 0.2px;
+}
+
+.ns-btn-continue:hover:not(:disabled) {
+  background: linear-gradient(90deg, #ff8000, #ffb020);
+  box-shadow: 0 6px 28px rgba(255, 140, 0, 0.5);
+  transform: translateY(-1px);
+}
+
+.ns-btn-continue:disabled {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 109, 0, 0.3),
+    rgba(255, 154, 0, 0.3)
+  );
+  color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Footer ── */
+.ns-footer {
+  position: relative;
+  z-index: 10;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.22);
+}
+
+@media (max-height: 860px) {
+  .ns-logo {
+    margin-bottom: 12px;
+  }
+
+  .ns-logo-img {
+    width: 158px;
+  }
+
+  .ns-card {
+    max-width: 340px;
+    padding: 16px 14px 12px;
+  }
+
+  .ns-preview {
+    margin-bottom: 14px;
+  }
+
+  .ns-av-outer {
+    width: 74px;
+    height: 74px;
+  }
+
+  .ns-field-label {
+    margin-bottom: 6px;
+  }
+
+  .ns-upload-btn {
+    padding: 9px 12px;
+    margin-bottom: 12px;
+  }
+
+  .ns-av-grid {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .ns-or {
+    margin: 0 0 10px;
+  }
+
+  .ns-input-wrap {
+    margin-bottom: 12px;
+  }
+
+  .ns-actions {
+    margin-top: 0;
+  }
+
+  .ns-btn-skip,
+  .ns-btn-continue {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .ns-footer {
+    margin-top: 8px;
+  }
+}
+
+.ns-footer a {
+  color: rgba(255, 140, 0, 0.75);
+  text-decoration: none;
+}
+
+.ns-footer a:hover {
+  color: #ff9a00;
+  text-decoration: underline;
+}

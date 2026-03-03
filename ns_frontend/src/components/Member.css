@@ -1,0 +1,132 @@
+.member-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: radial-gradient(circle at top left, #1e293b, #020617 60%);
+  color: #e2e8f0;
+}
+
+.member-card {
+  width: 100%;
+  max-width: 560px;
+  padding: 28px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.35);
+}
+
+.member-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.member-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(148, 163, 184, 0.35);
+}
+
+.member-avatar-fallback {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 700;
+  background: #334155;
+}
+
+.member-title {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.member-subtitle {
+  margin: 4px 0 0;
+  color: #94a3b8;
+}
+
+.member-status {
+  margin: 8px 0 0;
+}
+
+.member-error {
+  color: #fca5a5;
+}
+
+.member-coin-box {
+  margin-top: 10px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: linear-gradient(120deg, #f59e0b, #facc15);
+  color: #1e293b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.member-coin-label {
+  font-weight: 600;
+}
+
+.member-coin-value {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.member-info {
+  margin-top: 16px;
+  display: grid;
+  gap: 8px;
+}
+
+.member-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(30, 41, 59, 0.65);
+}
+
+.member-row span {
+  color: #94a3b8;
+}
+
+.member-row strong {
+  text-align: right;
+  word-break: break-all;
+}
+
+.member-btn {
+  margin-top: 12px;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #0ea5e9;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .member-card {
+    padding: 20px;
+  }
+
+  .member-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .member-row strong {
+    text-align: left;
+  }
+}
