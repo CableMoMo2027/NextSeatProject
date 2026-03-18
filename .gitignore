@@ -32,3 +32,6 @@ Thumbs.db
 .vscode/
 *.swp
 *.swo
+
+# Repository metadata backups created when flattening nested repos
+.repo-backups/
