@@ -18,10 +18,18 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);
-const analytics = typeof window !== 'undefined' ? getAnalytics(app) : null;
+let analytics = null;
+if (typeof window !== 'undefined') {
+    try {
+        analytics = getAnalytics(app);
+    } catch {
+        analytics = null;
+    }
+}
 
 // Auth Providers
 const googleProvider = new GoogleAuthProvider();
+googleProvider.setCustomParameters({ prompt: 'select_account' });
 const facebookProvider = new FacebookAuthProvider();
 
 export { app, auth, db, analytics, googleProvider, facebookProvider };

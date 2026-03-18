@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@300;400;500;600;700;800;900&display=swap');
+
 :root {
-  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --app-font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-family: var(--app-font-family);
   line-height: 1.5;
   font-weight: 400;
   color: #ffffff;
@@ -20,9 +23,80 @@ body {
   margin: 0;
   min-width: 320px;
   background: #000000;
+  font-family: var(--app-font-family);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.app-toast-viewport {
+  position: fixed;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  z-index: 4000;
+  display: grid;
+  gap: 10px;
+  pointer-events: none;
+  justify-items: center;
+}
+
+.app-toast {
+  min-width: 250px;
+  max-width: 360px;
+  border-radius: 14px;
+  padding: 12px 14px;
+  color: #ffffff;
+  border: 1px solid rgba(255, 80, 80, 0.85);
+  background: linear-gradient(135deg, rgba(140, 10, 10, 0.96), rgba(185, 20, 20, 0.96));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  box-shadow: 0 14px 32px rgba(120, 0, 0, 0.45), 0 0 0 1px rgba(255, 120, 120, 0.35) inset;
+  pointer-events: auto;
+}
+
+.app-toast-success {
+  border-color: rgba(255, 80, 80, 0.9);
+}
+
+.app-toast-error {
+  border-color: rgba(255, 80, 80, 0.9);
+}
+
+.app-toast-info {
+  border-color: rgba(255, 80, 80, 0.9);
+}
+
+.app-toast-message {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.app-toast-close {
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.app-toast-close:hover {
+  color: #fff;
 }

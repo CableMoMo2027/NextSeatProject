@@ -1,0 +1,24 @@
+import { CinemaEntry } from './types';
+
+export const NORTH_CINEMAS: CinemaEntry[] = [
+    // Major – Chiang Mai
+    { id: 'major-chiangmai-airport', chain: 'major', nameEn: 'Major Central Chiangmai Airport', nameTh: 'เมเจอร์ เชียงใหม่ แอร์พอร์ต', province: 'เชียงใหม่', district: 'เมืองเชียงใหม่', address: 'Airport Plaza เชียงใหม่', lat: 18.7665, lon: 98.9793, halls: ['CMA-A', 'CMA-B', 'CMA-IMAX'], screenTypes: ['IMAX', 'Standard'] },
+    { id: 'major-centralfestival-chiangmai', chain: 'major', nameEn: 'Major CentralFestival Chiangmai', nameTh: 'เมเจอร์ เซ็นทรัลเฟสติวัล เชียงใหม่', province: 'เชียงใหม่', district: 'เมืองเชียงใหม่', address: 'CentralFestival เชียงใหม่ ถ.มหิดล', lat: 18.7886, lon: 98.9757, halls: ['CFCM-A', 'CFCM-B', 'CFCM-IMAX', 'CFCM-4DX'], screenTypes: ['IMAX Laser', '4DX', 'Standard'] },
+    { id: 'major-lotus-chomthong', chain: 'major', nameEn: 'Major Lotus Chom Thong', nameTh: 'เมเจอร์ โลตัส จอมทอง', province: 'เชียงใหม่', district: 'จอมทอง', address: 'Lotus จอมทอง เชียงใหม่', lat: 18.4234, lon: 98.6896, halls: ['LCMT-A', 'LCMT-B'], screenTypes: ['Standard'] },
+    // Major – Chiang Rai
+    { id: 'major-central-chiangrai', chain: 'major', nameEn: 'Major Central Chiang Rai', nameTh: 'เมเจอร์ เซ็นทรัล เชียงราย', province: 'เชียงราย', district: 'เมืองเชียงราย', address: 'CentralPlaza เชียงราย', lat: 19.9071, lon: 99.8266, halls: ['CCR-A', 'CCR-B', 'CCR-IMAX'], screenTypes: ['IMAX', 'Standard'] },
+    { id: 'major-bigc-chiangrai', chain: 'major', nameEn: 'Major Big C Chiang Rai', nameTh: 'เมเจอร์ บิ๊กซี เชียงราย', province: 'เชียงราย', district: 'เมืองเชียงราย', address: 'Big C เชียงราย', lat: 19.9012, lon: 99.8241, halls: ['BCRC-A', 'BCRC-B'], screenTypes: ['Standard'] },
+    // Major – Lampang / Lamphun / Phayao / Phrae / Nan / Uttaradit / Mae Sot
+    { id: 'major-bigc-lampang', chain: 'major', nameEn: 'Major Big C Lampang', nameTh: 'เมเจอร์ บิ๊กซี ลำปาง', province: 'ลำปาง', district: 'เมืองลำปาง', address: 'Big C ลำปาง', lat: 18.2871, lon: 99.5013, halls: ['BLP-A', 'BLP-B'], screenTypes: ['Standard'] },
+    { id: 'major-jampha-lamphun', chain: 'major', nameEn: 'Major Jampha Lamphun', nameTh: 'เมเจอร์ แจ่มฟ้า ลำพูน', province: 'ลำพูน', district: 'เมืองลำพูน', address: 'แจ่มฟ้า ลำพูน', lat: 18.5745, lon: 98.9796, halls: ['JFLP-A', 'JFLP-B'], screenTypes: ['Standard'] },
+    { id: 'major-lotus-phayao', chain: 'major', nameEn: 'Major Lotus Phayao', nameTh: 'เมเจอร์ โลตัส พะเยา', province: 'พะเยา', district: 'เมืองพะเยา', address: 'Lotus พะเยา', lat: 19.1487, lon: 99.9028, halls: ['LPHY-A', 'LPHY-B'], screenTypes: ['Standard'] },
+    { id: 'major-markfour-phrae', chain: 'major', nameEn: 'Major Mark Four Phrae', nameTh: 'เมเจอร์ มาร์คโฟร์ แพร่', province: 'แพร่', district: 'เมืองแพร่', address: 'Mark Four แพร่', lat: 18.1444, lon: 100.1407, halls: ['MK4-A', 'MK4-B'], screenTypes: ['Standard'] },
+    { id: 'major-bigc-nan', chain: 'major', nameEn: 'Major Big C Nan', nameTh: 'เมเจอร์ บิ๊กซี น่าน', province: 'น่าน', district: 'เมืองน่าน', address: 'Big C น่าน', lat: 18.7739, lon: 100.7737, halls: ['BNN-A', 'BNN-B'], screenTypes: ['Standard'] },
+    { id: 'major-sripong-uttaradit', chain: 'major', nameEn: 'Major Sri Pong Park Uttaradit', nameTh: 'เมเจอร์ ศรีพงษ์พาร์ค อุตรดิตถ์', province: 'อุตรดิตถ์', district: 'เมืองอุตรดิตถ์', address: 'ศรีพงษ์พาร์ค อุตรดิตถ์', lat: 17.6204, lon: 100.0993, halls: ['SPPU-A', 'SPPU-B'], screenTypes: ['Standard'] },
+    { id: 'major-lotus-maesot', chain: 'major', nameEn: 'Major Lotus Mae Sot', nameTh: 'เมเจอร์ โลตัส แม่สอด', province: 'ตาก', district: 'แม่สอด', address: 'Lotus แม่สอด ตาก', lat: 16.7167, lon: 98.5736, halls: ['LMS-A', 'LMS-B'], screenTypes: ['Standard'] },
+    // SF – North
+    { id: 'sf-maya-chiangmai', chain: 'sf', nameEn: 'SF Cinema MAYA Chiang Mai', nameTh: 'เอสเอฟ ซีเนม่า มายา เชียงใหม่', province: 'เชียงใหม่', district: 'เมืองเชียงใหม่', address: 'MAYA Lifestyle Shopping Center ถ.นิมมานเหมินท์', lat: 18.7997, lon: 98.9679, halls: ['MAYA-A', 'MAYA-B', 'MAYA-C'], screenTypes: ['4DX', 'Standard'] },
+    { id: 'sf-promenada-chiangmai', chain: 'sf', nameEn: 'SF Cinema Promenada Chiang Mai', nameTh: 'เอสเอฟ ซีเนม่า พรอมานาด เชียงใหม่', province: 'เชียงใหม่', district: 'สารภี', address: 'Promenada Resort Mall เชียงใหม่', lat: 18.7448, lon: 99.0314, halls: ['PROM-CM-A', 'PROM-CM-B'], screenTypes: ['Standard'] },
+    { id: 'sf-central-lampang', chain: 'sf', nameEn: 'SF Cinema Central Lampang', nameTh: 'เอสเอฟ ซีเนม่า เซ็นทรัล ลำปาง', province: 'ลำปาง', district: 'เมืองลำปาง', address: 'CentralPlaza ลำปาง', lat: 18.2918, lon: 99.5057, halls: ['SFLP-A', 'SFLP-B'], screenTypes: ['Standard'] },
+    { id: 'sf-topplaza-phayao', chain: 'sf', nameEn: 'SF Cinema Tops Plaza Phayao', nameTh: 'เอสเอฟ ซีเนม่า ท็อปส์ พลาซ่า พะเยา', province: 'พะเยา', district: 'เมืองพะเยา', address: 'Tops Plaza พะเยา', lat: 19.1426, lon: 99.9011, halls: ['SFPHY-A', 'SFPHY-B'], screenTypes: ['Standard'] },
+];

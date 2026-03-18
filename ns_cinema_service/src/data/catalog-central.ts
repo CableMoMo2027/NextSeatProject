@@ -1,0 +1,38 @@
+import { CinemaEntry } from './types';
+
+/** ภาคกลาง (Central) – excluding BKK metro which is in catalog-bangkok.ts */
+export const CENTRAL_CINEMAS: CinemaEntry[] = [
+    // Major – Ayutthaya
+    { id: 'major-bigc-ayutthaya', chain: 'major', nameEn: 'Major Big C Ayutthaya', nameTh: 'เมเจอร์ บิ๊กซี อยุธยา', province: 'พระนครศรีอยุธยา', district: 'พระนครศรีอยุธยา', address: 'Big C อยุธยา', lat: 14.3542, lon: 100.5648, halls: ['BAY-A', 'BAY-B'], screenTypes: ['Standard'] },
+    { id: 'major-ayutthaya-citypark', chain: 'major', nameEn: 'Ayutthaya City Park Cineplex', nameTh: 'อยุธยาซิตี้พาร์ค ซีนีเพล็กซ์', province: 'พระนครศรีอยุธยา', district: 'พระนครศรีอยุธยา', address: 'Ayutthaya City Park', lat: 14.3398, lon: 100.5583, halls: ['ACP-A', 'ACP-B'], screenTypes: ['Standard'] },
+    // Major – Saraburi
+    { id: 'major-sukanan-saraburi', chain: 'major', nameEn: 'Major SukAnan Park Saraburi', nameTh: 'เมเจอร์ สุขอนันต์ปาร์ค สระบุรี', province: 'สระบุรี', district: 'เมืองสระบุรี', address: 'SukAnan Park สระบุรี', lat: 14.5289, lon: 100.9109, halls: ['SAR-A', 'SAR-B'], screenTypes: ['Standard'] },
+    { id: 'major-robinson-saraburi', chain: 'major', nameEn: 'Major Robinson Saraburi', nameTh: 'เมเจอร์ โรบินสัน สระบุรี', province: 'สระบุรี', district: 'เมืองสระบุรี', address: 'Robinson สระบุรี', lat: 14.5351, lon: 100.9134, halls: ['RSAR-A', 'RSAR-B'], screenTypes: ['Standard'] },
+    { id: 'major-bigc-saraburi', chain: 'major', nameEn: 'Major Big C Saraburi', nameTh: 'เมเจอร์ บิ๊กซี สระบุรี', province: 'สระบุรี', district: 'เมืองสระบุรี', address: 'Big C สระบุรี', lat: 14.5232, lon: 100.9072, halls: ['BSAR-A', 'BSAR-B'], screenTypes: ['Standard'] },
+    { id: 'major-lotus-saraburi', chain: 'major', nameEn: 'Major Lotus Saraburi', nameTh: 'เมเจอร์ โลตัส สระบุรี', province: 'สระบุรี', district: 'เมืองสระบุรี', address: 'Lotus สระบุรี', lat: 14.5274, lon: 100.9098, halls: ['LSAR-A', 'LSAR-B'], screenTypes: ['Standard'] },
+    // Major – Lopburi
+    { id: 'major-bigc-lopburi', chain: 'major', nameEn: 'Major Big C Lopburi', nameTh: 'เมเจอร์ บิ๊กซี ลพบุรี', province: 'ลพบุรี', district: 'เมืองลพบุรี', address: 'Big C ลพบุรี', lat: 14.7995, lon: 100.6131, halls: ['BLPB-A', 'BLPB-B'], screenTypes: ['Standard'] },
+    // Major – Nakhon Sawan
+    { id: 'major-vsquare-nakhonsawan', chain: 'major', nameEn: 'Major V-Square Nakhon Sawan', nameTh: 'เมเจอร์ วี-สแควร์ นครสวรรค์', province: 'นครสวรรค์', district: 'เมืองนครสวรรค์', address: 'V-Square นครสวรรค์', lat: 15.6929, lon: 100.1317, halls: ['VSQ-A', 'VSQ-B'], screenTypes: ['Standard'] },
+    { id: 'major-lotus-nakhonsawan', chain: 'major', nameEn: 'Major Lotus Nakhon Sawan', nameTh: 'เมเจอร์ โลตัส นครสวรรค์', province: 'นครสวรรค์', district: 'เมืองนครสวรรค์', address: 'Lotus นครสวรรค์', lat: 15.6887, lon: 100.1289, halls: ['LNSW-A', 'LNSW-B'], screenTypes: ['Standard'] },
+    // Major – Phitsanulok
+    { id: 'major-central-phitsanulok', chain: 'major', nameEn: 'Major Central Phitsanulok', nameTh: 'เมเจอร์ เซ็นทรัล พิษณุโลก', province: 'พิษณุโลก', district: 'เมืองพิษณุโลก', address: 'CentralPlaza พิษณุโลก', lat: 16.8398, lon: 100.2648, halls: ['CPLK-A', 'CPLK-B', 'CPLK-IMAX'], screenTypes: ['IMAX', 'Standard'] },
+    { id: 'major-lotus-phitsanulok', chain: 'major', nameEn: 'Major Lotus Phitsanulok', nameTh: 'เมเจอร์ โลตัส พิษณุโลก', province: 'พิษณุโลก', district: 'เมืองพิษณุโลก', address: 'Lotus พิษณุโลก', lat: 16.8342, lon: 100.2612, halls: ['LPLK-A', 'LPLK-B'], screenTypes: ['Standard'] },
+    // Major – Suphanburi / Ang Thong / Sing Buri
+    { id: 'major-lotus-suphanburi', chain: 'major', nameEn: 'Major Lotus Suphanburi', nameTh: 'เมเจอร์ โลตัส สุพรรณบุรี', province: 'สุพรรณบุรี', district: 'เมืองสุพรรณบุรี', address: 'Lotus สุพรรณบุรี', lat: 14.4740, lon: 100.1178, halls: ['LSPB-A', 'LSPB-B'], screenTypes: ['Standard'] },
+    { id: 'major-bigc-suphanburi', chain: 'major', nameEn: 'Major Big C Suphanburi', nameTh: 'เมเจอร์ บิ๊กซี สุพรรณบุรี', province: 'สุพรรณบุรี', district: 'เมืองสุพรรณบุรี', address: 'Big C สุพรรณบุรี', lat: 14.4749, lon: 100.1167, halls: ['BSPB-A', 'BSPB-B'], screenTypes: ['Standard'] },
+    { id: 'major-lotus-angthong', chain: 'major', nameEn: 'Major Lotus Ang Thong', nameTh: 'เมเจอร์ โลตัส อ่างทอง', province: 'อ่างทอง', district: 'เมืองอ่างทอง', address: 'Lotus อ่างทอง', lat: 14.5896, lon: 100.4551, halls: ['LATG-A', 'LATG-B'], screenTypes: ['Standard'] },
+    { id: 'major-chaisaeng-singburi', chain: 'major', nameEn: 'Major Chaisaeng Sing Buri', nameTh: 'เมเจอร์ ไชยแสง สิงห์บุรี', province: 'สิงห์บุรี', district: 'เมืองสิงห์บุรี', address: 'ไชยแสง สิงห์บุรี', lat: 14.8836, lon: 100.4018, halls: ['CSB-A', 'CSB-B'], screenTypes: ['Standard'] },
+    // Major – Nakorn Nayok / Petchabun / Kampaengphet / Phichit / Sukhothai / Phran / Lat Yao
+    { id: 'major-lotus-nakhonnayok', chain: 'major', nameEn: 'Major Lotus Nakhon Nayok', nameTh: 'เมเจอร์ โลตัส นครนายก', province: 'นครนายก', district: 'เมืองนครนายก', address: 'Lotus นครนายก', lat: 14.2048, lon: 101.2130, halls: ['LNN2-A', 'LNN2-B'], screenTypes: ['Standard'] },
+    { id: 'major-lotus-petchaboon', chain: 'major', nameEn: 'Major Lotus Petchaboon', nameTh: 'เมเจอร์ โลตัส เพชรบูรณ์', province: 'เพชรบูรณ์', district: 'เมืองเพชรบูรณ์', address: 'Lotus เพชรบูรณ์', lat: 16.4189, lon: 101.1570, halls: ['LPBN-A', 'LPBN-B'], screenTypes: ['Standard'] },
+    { id: 'major-bigc-kamphaengphet', chain: 'major', nameEn: 'Major Big C Kamphaengphet', nameTh: 'เมเจอร์ บิ๊กซี กำแพงเพชร', province: 'กำแพงเพชร', district: 'เมืองกำแพงเพชร', address: 'Big C กำแพงเพชร', lat: 16.4806, lon: 99.5219, halls: ['BKPCHT-A', 'BKPCHT-B'], screenTypes: ['Standard'] },
+    { id: 'major-robinson-kamphaengphet', chain: 'major', nameEn: 'Major Robinson Kamphaeng Phet', nameTh: 'เมเจอร์ โรบินสัน กำแพงเพชร', province: 'กำแพงเพชร', district: 'เมืองกำแพงเพชร', address: 'Robinson กำแพงเพชร', lat: 16.4824, lon: 99.5238, halls: ['RKPCHT-A', 'RKPCHT-B'], screenTypes: ['Standard'] },
+    { id: 'major-bigc-sukhothai', chain: 'major', nameEn: 'Major Big C Sukhothai', nameTh: 'เมเจอร์ บิ๊กซี สุโขทัย', province: 'สุโขทัย', district: 'เมืองสุโขทัย', address: 'Big C สุโขทัย', lat: 17.0068, lon: 99.8275, halls: ['BSKT-A', 'BSKT-B'], screenTypes: ['Standard'] },
+    { id: 'major-lotus-phichit', chain: 'major', nameEn: 'Major Lotus Phichit', nameTh: 'เมเจอร์ โลตัส พิจิตร', province: 'พิจิตร', district: 'เมืองพิจิตร', address: 'Lotus พิจิตร', lat: 16.4402, lon: 100.3489, halls: ['LPCT-A', 'LPCT-B'], screenTypes: ['Standard'] },
+    // SF – Central region
+    { id: 'sf-central-ayutthaya', chain: 'sf', nameEn: 'SF Cinema Central Ayutthaya', nameTh: 'เอสเอฟ ซีเนม่า เซ็นทรัล อยุธยา', province: 'พระนครศรีอยุธยา', district: 'พระนครศรีอยุธยา', address: 'CentralPlaza อยุธยา', lat: 14.3402, lon: 100.5601, halls: ['SFAY-A', 'SFAY-B'], screenTypes: ['Standard'] },
+    { id: 'sf-robinson-suphanburi', chain: 'sf', nameEn: 'SF Cinema Robinson Suphanburi', nameTh: 'เอสเอฟ ซีเนม่า โรบินสัน สุพรรณบุรี', province: 'สุพรรณบุรี', district: 'เมืองสุพรรณบุรี', address: 'Robinson สุพรรณบุรี', lat: 14.4761, lon: 100.1162, halls: ['SFSPB-A', 'SFSPB-B'], screenTypes: ['Standard'] },
+    { id: 'sf-central-nakhonsawan', chain: 'sf', nameEn: 'SF Cinema Central Nakhon Sawan', nameTh: 'เอสเอฟ ซีเนม่า เซ็นทรัล นครสวรรค์', province: 'นครสวรรค์', district: 'เมืองนครสวรรค์', address: 'CentralPlaza นครสวรรค์', lat: 15.7012, lon: 100.1349, halls: ['SFNSW-A', 'SFNSW-B'], screenTypes: ['Standard'] },
+    { id: 'sf-robinson-lopburi', chain: 'sf', nameEn: 'SF Cinema Robinson Lopburi', nameTh: 'เอสเอฟ ซีเนม่า โรบินสัน ลพบุรี', province: 'ลพบุรี', district: 'เมืองลพบุรี', address: 'Robinson ลพบุรี', lat: 14.8011, lon: 100.6140, halls: ['SFLPB-A', 'SFLPB-B'], screenTypes: ['Standard'] },
+];
