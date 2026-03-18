@@ -6,8 +6,16 @@ coverage/
 
 # Environment files
 .env
-.env.*
-!.env.example
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+
+# Keep real env files local only.
+# Examples: ns_backend/.env, ns_frontend/.env.local, ns_payment_service/.env
 
 # Logs
 logs/
